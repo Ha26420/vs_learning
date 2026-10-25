@@ -24,8 +24,14 @@ for i, c in enumerate(contours):
     cv2.putText(img, f"#{i} area={int(area)}", (x, y - 8), 
                 cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 255), 2)
 
-    cv2.imshow("binary", bw)
-    cv2.imshow("result", img)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
+cv2.namedWindow("binary", cv2.WINDOW_NORMAL)
+cv2.resizeWindow("binary", 600, 800)
+
+cv2.namedWindow("result", cv2.WINDOW_NORMAL)
+cv2.resizeWindow("result", 600, 800)
+
+cv2.imshow("binary", bw)
+cv2.imshow("result", img)
+cv2.waitKey(0)
+cv2.destroyAllWindows() 
     
